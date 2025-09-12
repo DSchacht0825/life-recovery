@@ -155,8 +155,8 @@ function App() {
                 Life Recovery San Diego exists to bring hope, healing, and spiritual restoration to individuals and families 
                 throughout San Diego County through Christ-centered 12-step addiction recovery teachings, powerful testimonies, and compassionate community 
                 outreach. We are committed to walking alongside adults and youth in overcoming drug addiction, alcohol dependency, 
-                brokenness, and life struggles, while serving our East County community by helping at-risk youth, supporting 
-                the homeless population, and offering a safe place for lasting recovery and spiritual transformation through biblical principles.
+                brokenness, and life struggles, while serving our East County community by helping at-risk youth and those experiencing homelessness. 
+                We don't simply support—we are committed to lasting solutions that end homelessness, restore lives, and offer a safe place for spiritual transformation through biblical principles.
               </p>
             </div>
           </div>
@@ -170,8 +170,8 @@ function App() {
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our vision is to see lives throughout San Diego County transformed by God's power—where adults and youth break free 
                 from drug addiction, alcohol dependency, hopelessness, and spiritual brokenness, discovering their true identity and purpose in Christ. 
-                We strive to build a thriving faith-based recovery community that helps the hurting find sobriety, supports the 
-                homeless population, and equips the next generation to live with spiritual purpose, freedom from addiction, and lasting hope through biblical recovery principles.
+                We strive to build a thriving faith-based recovery community that helps the hurting find sobriety, partners in ending homelessness 
+                through lasting solutions, and equips the next generation to live with spiritual purpose, freedom from addiction, and lasting hope through biblical recovery principles.
               </p>
             </div>
           </div>
