@@ -6,6 +6,8 @@ function App() {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -14,12 +16,35 @@ function App() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xgvlqkdb', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setSubmitStatus('idle'), 5000);
+      } else {
+        setSubmitStatus('error');
+        setTimeout(() => setSubmitStatus('idle'), 5000);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToSection = (id: string) => {
@@ -236,10 +261,21 @@ function App() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 hover-glow hover-scale animate-zoomIn delay-600"
+                    disabled={isSubmitting}
+                    className={`w-full ${isSubmitting ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600'} text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 hover-glow hover-scale animate-zoomIn delay-600 transition-colors`}
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
+                  {submitStatus === 'success' && (
+                    <div className="mt-4 p-3 bg-green-100 text-green-700 rounded-md">
+                      Thank you for your message! We will get back to you soon.
+                    </div>
+                  )}
+                  {submitStatus === 'error' && (
+                    <div className="mt-4 p-3 bg-red-100 text-red-700 rounded-md">
+                      Sorry, there was an error sending your message. Please try again.
+                    </div>
+                  )}
                 </form>
               </div>
 
