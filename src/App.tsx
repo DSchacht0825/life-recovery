@@ -129,8 +129,9 @@ function App() {
             <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-rotateIn">About Our San Diego Faith-Based Recovery Program</h2>
             <div className="text-lg text-gray-700 leading-relaxed">
               <p className="mb-6 animate-slideInRight delay-100">
-                Life Recovery San Diego is more than a 12-step meeting—we're a faith-based recovery community committed to helping youth, 
-                supporting those facing addiction and homelessness, and walking alongside anyone seeking hope and spiritual healing in East County San Diego.
+                Life Recovery San Diego is more than a 12-step meeting—we're a faith-based recovery community dedicated to helping youth, 
+                walking alongside those facing addiction, and bringing hope and spiritual healing to East County San Diego. 
+                We don't simply support people experiencing homelessness—we are committed to supporting lasting solutions that end homelessness and restore lives.
               </p>
               <p className="mb-6 animate-slideInLeft delay-200">
                 Our Christ-centered recovery program combines the proven framework of the traditional 12 steps with biblical teachings, 
