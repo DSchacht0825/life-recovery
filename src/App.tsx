@@ -49,8 +49,8 @@ function App() {
             </div>
             
             {/* Centered logo */}
-            <div className="flex justify-center animate-fadeInUp delay-200">
-              <img src="/logo2.jpg" alt="Life Recovery Logo" style={{ maxWidth: '120px', maxHeight: '120px', width: 'auto', height: 'auto' }} className="hover-scale" />
+            <div className="flex justify-center animate-zoomIn delay-200">
+              <img src="/logo2.jpg" alt="Life Recovery Logo" style={{ maxWidth: '120px', maxHeight: '120px', width: 'auto', height: 'auto' }} className="hover-scale animate-pulse" />
             </div>
             
             {/* Right side links */}
@@ -73,7 +73,7 @@ function App() {
               Together, we grow through the teachings of the 12 steps and hear powerful testimonies 
               from people with lived experience.
             </p>
-            <div className="bg-blue-500 text-white px-8 py-4 rounded-lg inline-block animate-fadeInUp delay-500 hover-glow hover-scale">
+            <div className="bg-blue-500 text-white px-8 py-4 rounded-lg inline-block animate-flipIn delay-500 hover-glow hover-scale">
               <h3 className="text-2xl font-semibold mb-2">Friday Nights at 6pm</h3>
               <p className="text-lg">Casa de Oro Bible Church</p>
             </div>
@@ -83,7 +83,7 @@ function App() {
         {/* About Section */}
         <section id="about" className="py-20 px-4 bg-white bg-opacity-90 hover-lift">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-slideInLeft">About Life Recovery</h2>
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-rotateIn">About Life Recovery</h2>
             <div className="text-lg text-gray-700 leading-relaxed">
               <p className="mb-6 animate-slideInRight delay-100">
                 Life Recovery is more than a meeting—it's a community outreach committed to helping youth, 
@@ -105,8 +105,8 @@ function App() {
         {/* Mission Section */}
         <section id="mission" className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-fadeInUp">Our Mission</h2>
-            <div className="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg hover-lift animate-fadeInUp delay-200">
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-slideInUp">Our Mission</h2>
+            <div className="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-200">
               <p className="text-lg text-gray-700 leading-relaxed">
                 Life Recovery exists to bring hope, healing, and restoration to individuals and families 
                 through Christ-centered 12-step teachings, real-life testimonies, and compassionate community 
@@ -121,8 +121,8 @@ function App() {
         {/* Vision Section */}
         <section id="vision" className="py-20 px-4 bg-white bg-opacity-90 hover-lift">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-slideInRight">Our Vision</h2>
-            <div className="bg-blue-50 p-8 rounded-lg hover-glow animate-slideInLeft delay-200">
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-zoomIn">Our Vision</h2>
+            <div className="bg-blue-50 p-8 rounded-lg hover-glow animate-slideInDiagonal delay-200">
               <p className="text-lg text-gray-700 leading-relaxed">
                 Our vision is to see lives transformed by God's power—where adults and youth break free 
                 from addiction, hopelessness, and brokenness, and discover their true identity in Christ. 
@@ -136,8 +136,8 @@ function App() {
         {/* Giving Section */}
         <section id="giving" className="py-20 px-4 bg-white bg-opacity-90">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-8 animate-fadeInUp">Support Our Ministry</h2>
-            <div className="bg-blue-50 p-8 rounded-lg hover-glow animate-fadeInUp delay-200">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8 animate-flipIn">Support Our Ministry</h2>
+            <div className="bg-blue-50 p-8 rounded-lg hover-glow animate-slideInUp delay-200">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Your generous donations help us continue our mission of bringing hope, healing, and restoration 
                 to individuals and families in our community. Every contribution makes a difference in someone's 
@@ -172,7 +172,7 @@ function App() {
             <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-fadeInUp">Get In Touch</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Contact Form */}
-              <div className="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg hover-lift animate-fadeInUp delay-200">
+              <div className="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg hover-lift animate-slideInLeft delay-200">
                 <form onSubmit={handleSubmit}>
                   <div className="mb-6 animate-slideInLeft delay-300">
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -218,7 +218,7 @@ function App() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 hover-glow hover-scale animate-fadeInUp delay-600"
+                    className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 hover-glow hover-scale animate-zoomIn delay-600"
                   >
                     Send Message
                   </button>
@@ -258,7 +258,7 @@ function App() {
         {/* Footer */}
         <footer className="bg-blue-500 text-white py-12 px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-8">
+            <div className="text-center mb-8 animate-slideInUp">
               <h3 className="text-3xl font-bold">Life Recovery</h3>
               <p className="text-xl mt-2">Casa de Oro Bible Church</p>
               <p className="text-lg mt-1">Friday Nights at 6pm - All Welcome</p>
@@ -266,7 +266,7 @@ function App() {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center">
               {/* Contact Info */}
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left animate-slideInLeft delay-200">
                 <h4 className="text-xl font-semibold mb-3">Contact Us</h4>
                 <p className="mb-2">
                   <a href="tel:+16194146985" className="text-white hover:text-gray-300 underline">
@@ -281,7 +281,7 @@ function App() {
               </div>
 
               {/* Social & Giving Buttons */}
-              <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col items-center gap-4 animate-slideInRight delay-300">
                 <a 
                   href="https://www.facebook.com/profile.php?id=61556688216356" 
                   target="_blank" 
