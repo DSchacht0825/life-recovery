@@ -40,7 +40,8 @@ function App() {
       <div className="relative z-10">
         {/* Navigation - floating on page */}
         <div className="absolute top-0 left-0 right-0 z-50 px-4 py-4">
-          <div className="max-w-5xl mx-auto grid grid-cols-3 items-center gap-8">
+          {/* Desktop Navigation */}
+          <div className="hidden md:grid max-w-5xl mx-auto grid-cols-3 items-center gap-8">
             {/* Left side links */}
             <div className="flex space-x-8 justify-end animate-slideInLeft delay-100">
               <button onClick={() => scrollToSection('home')} className="text-black hover:text-blue-500 hover-lift font-medium">Home</button>
@@ -60,18 +61,35 @@ function App() {
               <button onClick={() => scrollToSection('giving')} className="text-black hover:text-blue-500 hover-lift font-medium">Giving</button>
             </div>
           </div>
+
+          {/* Mobile Navigation */}
+          <div className="md:hidden flex flex-col items-center gap-4">
+            {/* Logo at top */}
+            <div className="animate-zoomIn">
+              <img src="/logo2.jpg" alt="Life Recovery Logo" style={{ maxWidth: '80px', maxHeight: '80px', width: 'auto', height: 'auto' }} className="hover-scale" />
+            </div>
+            
+            {/* Mobile menu links */}
+            <div className="flex flex-wrap justify-center gap-3 text-sm">
+              <button onClick={() => scrollToSection('home')} className="text-black hover:text-blue-500 font-medium">Home</button>
+              <button onClick={() => scrollToSection('about')} className="text-black hover:text-blue-500 font-medium">About</button>
+              <button onClick={() => scrollToSection('mission')} className="text-black hover:text-blue-500 font-medium">Mission</button>
+              <button onClick={() => scrollToSection('vision')} className="text-black hover:text-blue-500 font-medium">Vision</button>
+              <button onClick={() => scrollToSection('contact')} className="text-black hover:text-blue-500 font-medium">Contact</button>
+              <button onClick={() => scrollToSection('giving')} className="text-black hover:text-blue-500 font-medium">Giving</button>
+            </div>
+          </div>
         </div>
 
         {/* Hero Section */}
-        <section id="home" className="py-20 px-4 text-center">
+        <section id="home" className="py-20 px-4 text-center" style={{ paddingTop: '8rem' }}>
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold text-gray-900 mb-6 animate-fadeInUp delay-300">
-              Life Recovery at Casa de Oro Bible Church
+              Life Recovery San Diego | Faith-Based 12-Step Recovery Program
             </h1>
             <p className="text-xl text-gray-700 mb-8 animate-fadeInUp delay-400">
-              Join us Friday nights for Life Recovery, a 12-step meeting for both adults and youth. 
-              Together, we grow through the teachings of the 12 steps and hear powerful testimonies 
-              from people with lived experience.
+              Join our Christ-centered 12-step recovery program in Spring Valley, San Diego. Every Friday 6pm at Casa de Oro Bible Church. 
+              Supporting adults and youth through addiction recovery, life struggles, and spiritual healing with proven 12-step principles and biblical teachings.
             </p>
             <div className="bg-blue-500 text-white px-8 py-4 rounded-lg inline-block animate-flipIn delay-500 hover-glow hover-scale">
               <h3 className="text-2xl font-semibold mb-2">Friday Nights at 6pm</h3>
@@ -83,20 +101,20 @@ function App() {
         {/* About Section */}
         <section id="about" className="py-20 px-4 bg-white bg-opacity-90 hover-lift">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-rotateIn">About Life Recovery</h2>
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-rotateIn">About Our San Diego Faith-Based Recovery Program</h2>
             <div className="text-lg text-gray-700 leading-relaxed">
               <p className="mb-6 animate-slideInRight delay-100">
-                Life Recovery is more than a meeting—it's a community outreach committed to helping youth, 
-                supporting those facing homelessness, and walking alongside anyone seeking hope and change.
+                Life Recovery San Diego is more than a 12-step meeting—we're a faith-based recovery community committed to helping youth, 
+                supporting those facing addiction and homelessness, and walking alongside anyone seeking hope and spiritual healing in East County San Diego.
               </p>
               <p className="mb-6 animate-slideInLeft delay-200">
-                Our program combines the proven framework of the 12 steps with Christ-centered teachings, 
-                creating a supportive environment where individuals can share their struggles and celebrate 
-                their victories together.
+                Our Christ-centered recovery program combines the proven framework of the traditional 12 steps with biblical teachings, 
+                creating a supportive environment where individuals battling addiction, substance abuse, and life struggles can share their testimonies and celebrate 
+                victories together through God's grace.
               </p>
               <p className="animate-slideInRight delay-300">
-                Whether you're struggling with addiction, life challenges, or simply seeking community, 
-                you'll find a welcoming place at Life Recovery where real transformation happens.
+                Whether you're struggling with drug addiction, alcohol dependency, life challenges, or simply seeking a recovery community, 
+                you'll find a welcoming place at Life Recovery where real spiritual transformation and lasting sobriety happens through Christ.
               </p>
             </div>
           </div>
@@ -105,14 +123,14 @@ function App() {
         {/* Mission Section */}
         <section id="mission" className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-slideInUp">Our Mission</h2>
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-slideInUp">Our Recovery Mission in San Diego County</h2>
             <div className="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-200">
               <p className="text-lg text-gray-700 leading-relaxed">
-                Life Recovery exists to bring hope, healing, and restoration to individuals and families 
-                through Christ-centered 12-step teachings, real-life testimonies, and compassionate community 
-                outreach. We are committed to walking alongside adults and youth in overcoming addiction, 
-                brokenness, and life struggles, while serving our community by helping youth, supporting 
-                the homeless, and offering a safe place for change.
+                Life Recovery San Diego exists to bring hope, healing, and spiritual restoration to individuals and families 
+                throughout San Diego County through Christ-centered 12-step addiction recovery teachings, powerful testimonies, and compassionate community 
+                outreach. We are committed to walking alongside adults and youth in overcoming drug addiction, alcohol dependency, 
+                brokenness, and life struggles, while serving our East County community by helping at-risk youth, supporting 
+                the homeless population, and offering a safe place for lasting recovery and spiritual transformation through biblical principles.
               </p>
             </div>
           </div>
@@ -121,13 +139,13 @@ function App() {
         {/* Vision Section */}
         <section id="vision" className="py-20 px-4 bg-white bg-opacity-90 hover-lift">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-zoomIn">Our Vision</h2>
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-zoomIn">Our Vision for Recovery in San Diego</h2>
             <div className="bg-blue-50 p-8 rounded-lg hover-glow animate-slideInDiagonal delay-200">
               <p className="text-lg text-gray-700 leading-relaxed">
-                Our vision is to see lives transformed by God's power—where adults and youth break free 
-                from addiction, hopelessness, and brokenness, and discover their true identity in Christ. 
-                We strive to build a thriving community of healing that helps the hurting, supports the 
-                homeless, and equips the next generation to live with purpose, freedom, and hope.
+                Our vision is to see lives throughout San Diego County transformed by God's power—where adults and youth break free 
+                from drug addiction, alcohol dependency, hopelessness, and spiritual brokenness, discovering their true identity and purpose in Christ. 
+                We strive to build a thriving faith-based recovery community that helps the hurting find sobriety, supports the 
+                homeless population, and equips the next generation to live with spiritual purpose, freedom from addiction, and lasting hope through biblical recovery principles.
               </p>
             </div>
           </div>
@@ -136,15 +154,15 @@ function App() {
         {/* Giving Section */}
         <section id="giving" className="py-20 px-4 bg-white bg-opacity-90">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-8 animate-flipIn">Support Our Ministry</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-8 animate-flipIn">Support Our San Diego Recovery Ministry</h2>
             <div className="bg-blue-50 p-8 rounded-lg hover-glow animate-slideInUp delay-200">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Your generous donations help us continue our mission of bringing hope, healing, and restoration 
-                to individuals and families in our community. Every contribution makes a difference in someone's 
-                journey to recovery.
+                Your generous donations help us continue our faith-based recovery mission of bringing hope, healing, and spiritual restoration 
+                to individuals and families struggling with addiction throughout San Diego County. Every contribution makes a difference in someone's 
+                journey from addiction to recovery and spiritual transformation.
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                Life Recovery is a ministry of Casa de Oro Bible Church. All donations are tax-deductible.
+                Life Recovery San Diego is a ministry of Casa de Oro Bible Church in Spring Valley. All donations supporting our 12-step recovery program are tax-deductible.
               </p>
               <div className="flex flex-col items-center gap-4">
                 <a 
@@ -286,25 +304,27 @@ function App() {
                   href="https://www.facebook.com/profile.php?id=61556688216356" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 rounded-lg hover-glow hover-scale transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 rounded-lg hover-glow hover-scale transition-all duration-300 w-full md:w-auto justify-center"
                   style={{ backgroundColor: '#1877f2', color: 'white' }}
                 >
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
-                  Follow us on Facebook
+                  <span className="hidden sm:inline">Follow us on Facebook</span>
+                  <span className="sm:hidden">Facebook</span>
                 </a>
                 <a 
                   href="https://www.paypal.com/ncp/payment/79LF9UUUUV234" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 rounded-lg hover-glow hover-scale transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 rounded-lg hover-glow hover-scale transition-all duration-300 w-full md:w-auto justify-center"
                   style={{ backgroundColor: '#ffc439', color: '#003087' }}
                 >
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.17c-.2-.04-.413-.06-.64-.06H13.78c-.524 0-.968.383-1.05.901l-.86 5.45c-.082.518.257.99.76.99h1.91c3.24 0 5.77-1.317 6.504-5.12.734-3.803-.257-1.991-.822-1.991z"/>
                   </svg>
-                  Support Our Ministry
+                  <span className="hidden sm:inline">Support Our Ministry</span>
+                  <span className="sm:hidden">Donate</span>
                 </a>
               </div>
 

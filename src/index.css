@@ -98,6 +98,22 @@ body {
 .bg-gray-100 { background-color: #f3f4f6; }
 .hover\\:bg-gray-100:hover { background-color: #f3f4f6; }
 
+/* Mobile display utilities */
+.hidden { display: none; }
+@media (min-width: 768px) {
+  .md\:hidden { display: none; }
+  .md\:grid { display: grid; }
+  .md\:block { display: block; }
+}
+.flex-wrap { flex-wrap: wrap; }
+.gap-3 { gap: 0.75rem; }
+.sm\:inline { display: inline; }
+.sm\:hidden { display: none; }
+@media (min-width: 640px) {
+  .sm\:inline { display: inline; }
+  .sm\:hidden { display: none; }
+}
+
 .text-center { text-align: center; }
 .text-5xl { font-size: 3rem; line-height: 1; }
 .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
@@ -134,9 +150,57 @@ body {
 .flex-col { flex-direction: column; }
 .max-w-6xl { max-width: 72rem; }
 
+/* Mobile responsive utilities */
+@media (max-width: 768px) {
+  /* Typography adjustments */
+  .text-5xl { font-size: 2rem; line-height: 1.2; }
+  .text-4xl { font-size: 1.75rem; line-height: 2rem; }
+  .text-3xl { font-size: 1.5rem; line-height: 1.75rem; }
+  .text-2xl { font-size: 1.25rem; line-height: 1.5rem; }
+  .text-xl { font-size: 1.125rem; line-height: 1.5rem; }
+  
+  /* Padding adjustments */
+  .py-20 { padding-top: 3rem; padding-bottom: 3rem; }
+  .py-12 { padding-top: 2rem; padding-bottom: 2rem; }
+  .px-8 { padding-left: 1rem; padding-right: 1rem; }
+  .p-8 { padding: 1.5rem; }
+  .p-6 { padding: 1rem; }
+  
+  /* Navigation adjustments */
+  .sm\:grid-cols-1 { grid-template-columns: 1fr; }
+  .sm\:flex-col { flex-direction: column; }
+  .sm\:space-y-4 > * + * { margin-top: 1rem; margin-left: 0; }
+  .sm\:text-center { text-align: center; }
+  .sm\:text-left { text-align: left; }
+  .sm\:gap-2 { gap: 0.5rem; }
+  .sm\:mb-4 { margin-bottom: 1rem; }
+  .sm\:hidden { display: none; }
+  .sm\:block { display: block; }
+  
+  /* Footer specific */
+  .lg\:text-left { text-align: center; }
+  .lg\:text-right { text-align: center; }
+  
+  /* Button adjustments */
+  .px-6 { padding-left: 1rem; padding-right: 1rem; }
+  .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+  
+  /* Form adjustments */
+  input, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Medium screen responsive */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .md\:text-3xl { font-size: 1.875rem; }
+}
+
 /* Large screen responsive */
 @media (min-width: 1024px) {
   .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 .justify-start { justify-content: flex-start; }
 .justify-end { justify-content: flex-end; }
