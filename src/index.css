@@ -105,6 +105,11 @@ body {
 .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
 .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
 .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-gray-600 { color: #4b5563; }
+.italic { font-style: italic; }
+.w-6 { width: 1.5rem; }
+.h-6 { height: 1.5rem; }
+.mr-3 { margin-right: 0.75rem; }
 .font-bold { font-weight: 700; }
 .font-semibold { font-weight: 600; }
 .font-medium { font-weight: 500; }
@@ -125,6 +130,8 @@ body {
 .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
 .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .gap-8 { gap: 2rem; }
+.gap-4 { gap: 1rem; }
+.flex-col { flex-direction: column; }
 .max-w-6xl { max-width: 72rem; }
 
 /* Large screen responsive */

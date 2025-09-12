@@ -57,7 +57,7 @@ function App() {
             <div className="flex space-x-8 justify-start animate-slideInRight delay-300">
               <button onClick={() => scrollToSection('vision')} className="text-black hover:text-blue-500 hover-lift font-medium">Vision</button>
               <button onClick={() => scrollToSection('contact')} className="text-black hover:text-blue-500 hover-lift font-medium">Contact</button>
-              <a href="https://www.paypal.com/ncp/payment/79LF9UUUUV234" target="_blank" rel="noopener noreferrer" className="text-black hover:text-blue-500 hover-lift font-medium">Giving</a>
+              <button onClick={() => scrollToSection('giving')} className="text-black hover:text-blue-500 hover-lift font-medium">Giving</button>
             </div>
           </div>
         </div>
@@ -133,6 +133,39 @@ function App() {
           </div>
         </section>
 
+        {/* Giving Section */}
+        <section id="giving" className="py-20 px-4 bg-white bg-opacity-90">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8 animate-fadeInUp">Support Our Ministry</h2>
+            <div className="bg-blue-50 p-8 rounded-lg hover-glow animate-fadeInUp delay-200">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                Your generous donations help us continue our mission of bringing hope, healing, and restoration 
+                to individuals and families in our community. Every contribution makes a difference in someone's 
+                journey to recovery.
+              </p>
+              <p className="text-lg text-gray-700 mb-8">
+                Life Recovery is a ministry of Casa de Oro Bible Church. All donations are tax-deductible.
+              </p>
+              <div className="flex flex-col items-center gap-4">
+                <a 
+                  href="https://www.paypal.com/ncp/payment/79LF9UUUUV234" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-8 py-4 bg-blue-500 text-white text-lg rounded-lg hover:bg-blue-600 hover-glow hover-scale transition-all duration-300"
+                >
+                  <svg className="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.17c-.2-.04-.413-.06-.64-.06H13.78c-.524 0-.968.383-1.05.901l-.86 5.45c-.082.518.257.99.76.99h1.91c3.24 0 5.77-1.317 6.504-5.12.734-3.803-.257-1.991-.822-1.991z"/>
+                  </svg>
+                  Donate via PayPal
+                </a>
+                <p className="text-sm text-gray-600 italic">
+                  You will be redirected to PayPal's secure site to complete your donation
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section id="contact" className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -195,8 +228,8 @@ function App() {
               {/* Map and Location Info */}
               <div className="animate-slideInRight delay-300">
                 <div className="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg hover-lift mb-6">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">Visit Us</h3>
-                  <div className="text-gray-700">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4 text-center">Visit Us</h3>
+                  <div className="text-gray-700 text-center">
                     <p className="mb-2 font-medium">Casa de Oro Bible Church</p>
                     <p className="mb-2">10195 Madrid Way</p>
                     <p className="mb-4">Spring Valley, CA 91977</p>
@@ -231,7 +264,7 @@ function App() {
               <p className="text-lg mt-1">Friday Nights at 6pm - All Welcome</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center">
               {/* Contact Info */}
               <div className="text-center lg:text-left">
                 <h4 className="text-xl font-semibold mb-3">Contact Us</h4>
@@ -248,12 +281,13 @@ function App() {
               </div>
 
               {/* Social & Giving Buttons */}
-              <div className="text-center space-y-4">
+              <div className="flex flex-col items-center gap-4">
                 <a 
                   href="https://www.facebook.com/profile.php?id=61556688216356" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 hover-glow hover-scale transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 rounded-lg hover-glow hover-scale transition-all duration-300"
+                  style={{ backgroundColor: '#1877f2', color: 'white' }}
                 >
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -264,7 +298,8 @@ function App() {
                   href="https://www.paypal.com/ncp/payment/79LF9UUUUV234" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 hover-glow hover-scale transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 rounded-lg hover-glow hover-scale transition-all duration-300"
+                  style={{ backgroundColor: '#ffc439', color: '#003087' }}
                 >
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.17c-.2-.04-.413-.06-.64-.06H13.78c-.524 0-.968.383-1.05.901l-.86 5.45c-.082.518.257.99.76.99h1.91c3.24 0 5.77-1.317 6.504-5.12.734-3.803-.257-1.991-.822-1.991z"/>
@@ -273,12 +308,6 @@ function App() {
                 </a>
               </div>
 
-              {/* Location */}
-              <div className="text-center lg:text-right">
-                <h4 className="text-xl font-semibold mb-3">Visit Us</h4>
-                <p className="mb-1">10195 Madrid Way</p>
-                <p>Spring Valley, CA 91977</p>
-              </div>
             </div>
           </div>
         </footer>
