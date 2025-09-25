@@ -1,5 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /*#
+Disallow: /#*
 
-Sitemap: https://www.liferecoverysd.org/sitemap.xml
+Sitemap: https://liferecoverysd.org/sitemap.xml

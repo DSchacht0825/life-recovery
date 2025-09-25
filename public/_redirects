@@ -1,0 +1,14 @@
+# Force www to non-www
+https://www.liferecoverysd.org/* https://liferecoverysd.org/:splat 301!
+
+# Block crawling of hash-based URLs by redirecting them to main page
+/#* / 301
+/#home / 301
+/#about / 301
+/#mission / 301
+/#vision / 301
+/#contact / 301
+/#giving / 301
+
+# SPA fallback - serve index.html for all other routes
+/* /index.html 200
