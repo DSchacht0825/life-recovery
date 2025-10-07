@@ -54,10 +54,10 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Background Image with Opacity - full screen */}
-      <div 
+      <div
         className="fixed inset-0 bg-cover bg-center bg-no-repeat opacity-25 z-0"
-        style={{ 
-          backgroundImage: 'url(https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)'
+        style={{
+          backgroundImage: 'url(/background.jpeg)'
         }}
       ></div>
       

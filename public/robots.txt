@@ -2,5 +2,12 @@
 User-agent: *
 Disallow: /*#
 Disallow: /#*
+Allow: /
 
+# Sitemaps
 Sitemap: https://liferecoverysd.org/sitemap.xml
+
+# Crawl delay (optional - removes rate limiting)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
