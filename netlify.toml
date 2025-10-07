@@ -1,12 +1,13 @@
-[[plugins]]
-  package = "@netlify/plugin-sitemap"
-
-  [plugins.inputs]
-  buildDir = "build"
-  exclude = [
-    "404.html",
-    "*/404.html"
-  ]
+# Disabled auto-sitemap generation - using custom sitemap.xml instead
+# [[plugins]]
+#   package = "@netlify/plugin-sitemap"
+#
+#   [plugins.inputs]
+#   buildDir = "build"
+#   exclude = [
+#     "404.html",
+#     "*/404.html"
+#   ]
 
 [[headers]]
   for = "/*"
