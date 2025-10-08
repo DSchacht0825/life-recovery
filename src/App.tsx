@@ -68,20 +68,21 @@ function App() {
           {/* Desktop Navigation */}
           <div className="hidden md:grid max-w-5xl mx-auto grid-cols-3 items-center gap-8">
             {/* Left side links */}
-            <div className="flex space-x-8 justify-end animate-slideInLeft delay-100">
+            <div className="flex space-x-6 justify-end animate-slideInLeft delay-100">
               <button onClick={() => scrollToSection('home')} className="text-black hover:text-blue-500 hover-lift font-medium">Home</button>
               <button onClick={() => scrollToSection('about')} className="text-black hover:text-blue-500 hover-lift font-medium">About</button>
               <button onClick={() => scrollToSection('mission')} className="text-black hover:text-blue-500 hover-lift font-medium">Mission</button>
             </div>
-            
+
             {/* Centered logo */}
             <div className="flex justify-center animate-zoomIn delay-200">
               <img src="/logo2.jpg" alt="Life Recovery Logo" style={{ maxWidth: '120px', maxHeight: '120px', width: 'auto', height: 'auto' }} className="hover-scale animate-pulse" />
             </div>
-            
+
             {/* Right side links */}
-            <div className="flex space-x-8 justify-start animate-slideInRight delay-300">
+            <div className="flex space-x-6 justify-start animate-slideInRight delay-300">
               <button onClick={() => scrollToSection('vision')} className="text-black hover:text-blue-500 hover-lift font-medium">Vision</button>
+              <button onClick={() => scrollToSection('steps')} className="text-black hover:text-blue-500 hover-lift font-medium">12 Steps</button>
               <button onClick={() => scrollToSection('contact')} className="text-black hover:text-blue-500 hover-lift font-medium">Contact</button>
               <button onClick={() => scrollToSection('giving')} className="text-black hover:text-blue-500 hover-lift font-medium">Giving</button>
             </div>
@@ -93,13 +94,14 @@ function App() {
             <div className="animate-zoomIn">
               <img src="/logo2.jpg" alt="Life Recovery Logo" style={{ maxWidth: '80px', maxHeight: '80px', width: 'auto', height: 'auto' }} className="hover-scale" />
             </div>
-            
+
             {/* Mobile menu links */}
             <div className="flex flex-wrap justify-center gap-3 text-sm">
               <button onClick={() => scrollToSection('home')} className="text-black hover:text-blue-500 font-medium">Home</button>
               <button onClick={() => scrollToSection('about')} className="text-black hover:text-blue-500 font-medium">About</button>
               <button onClick={() => scrollToSection('mission')} className="text-black hover:text-blue-500 font-medium">Mission</button>
               <button onClick={() => scrollToSection('vision')} className="text-black hover:text-blue-500 font-medium">Vision</button>
+              <button onClick={() => scrollToSection('steps')} className="text-black hover:text-blue-500 font-medium">12 Steps</button>
               <button onClick={() => scrollToSection('contact')} className="text-black hover:text-blue-500 font-medium">Contact</button>
               <button onClick={() => scrollToSection('giving')} className="text-black hover:text-blue-500 font-medium">Giving</button>
             </div>
@@ -168,11 +170,279 @@ function App() {
             <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 animate-zoomIn">Our Vision for Recovery in San Diego</h2>
             <div className="bg-blue-50 p-8 rounded-lg hover-glow animate-slideInDiagonal delay-200">
               <p className="text-lg text-gray-700 leading-relaxed">
-                Our vision is to see lives throughout San Diego County transformed by God's power—where adults and youth break free 
-                from drug addiction, alcohol dependency, hopelessness, and spiritual brokenness, discovering their true identity and purpose in Christ. 
-                We strive to build a thriving faith-based recovery community that helps the hurting find sobriety, partners in ending homelessness 
+                Our vision is to see lives throughout San Diego County transformed by God's power—where adults and youth break free
+                from drug addiction, alcohol dependency, hopelessness, and spiritual brokenness, discovering their true identity and purpose in Christ.
+                We strive to build a thriving faith-based recovery community that helps the hurting find sobriety, partners in ending homelessness
                 through lasting solutions, and equips the next generation to live with spiritual purpose, freedom from addiction, and lasting hope through biblical recovery principles.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 12 Steps Section */}
+        <section id="steps" className="py-20 px-4 bg-white bg-opacity-90">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-4 animate-fadeInUp">Life Recovery 12 Steps</h2>
+            <p className="text-xl text-center text-gray-700 mb-16 animate-fadeInUp delay-100">(Christ-Centered)</p>
+
+            {/* 12 Steps Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+              {/* Step 1 */}
+              <div className="bg-blue-50 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-100">
+                <h3 className="text-2xl font-bold text-blue-500 mb-4">Step 1 – Honesty</h3>
+                <p className="text-gray-900 font-semibold mb-4 text-lg leading-relaxed">
+                  We admitted that we were powerless over our problems and that our lives had become unmanageable.
+                </p>
+                <p className="text-gray-700 italic text-base leading-relaxed">
+                  Romans 7:18 – "I know that nothing good lives in me... I want to do what is right, but I can't."
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="bg-blue-50 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-150">
+                <h3 className="text-2xl font-bold text-blue-500 mb-4">Step 2 – Hope</h3>
+                <p className="text-gray-900 font-semibold mb-4 text-lg leading-relaxed">
+                  We came to believe that a Power greater than ourselves could restore us to sanity.
+                </p>
+                <p className="text-gray-700 italic text-base leading-relaxed">
+                  Philippians 2:13 – "For it is God who works in you to will and to act in order to fulfill his good purpose."
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="bg-blue-50 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-200">
+                <h3 className="text-2xl font-bold text-blue-500 mb-4">Step 3 – Surrender</h3>
+                <p className="text-gray-900 font-semibold mb-4 text-lg leading-relaxed">
+                  We made a decision to turn our lives and our wills over to the care of God.
+                </p>
+                <p className="text-gray-700 italic text-base leading-relaxed">
+                  Romans 12:1 – "Offer your bodies as a living sacrifice, holy and pleasing to God—this is your true and proper worship."
+                </p>
+              </div>
+
+              {/* Step 4 */}
+              <div className="bg-blue-50 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-250">
+                <h3 className="text-2xl font-bold text-blue-500 mb-4">Step 4 – Courage</h3>
+                <p className="text-gray-900 font-semibold mb-4 text-lg leading-relaxed">
+                  We made a searching and fearless moral inventory of ourselves.
+                </p>
+                <p className="text-gray-700 italic text-base leading-relaxed">
+                  Lamentations 3:40 – "Let us examine our ways and test them, and let us return to the Lord."
+                </p>
+              </div>
+
+              {/* Step 5 */}
+              <div className="bg-blue-50 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-300">
+                <h3 className="text-2xl font-bold text-blue-500 mb-4">Step 5 – Integrity</h3>
+                <p className="text-gray-900 font-semibold mb-4 text-lg leading-relaxed">
+                  We admitted to God, to ourselves, and to another human being the exact nature of our wrongs.
+                </p>
+                <p className="text-gray-700 italic text-base leading-relaxed">
+                  James 5:16 – "Confess your sins to each other and pray for each other so that you may be healed."
+                </p>
+              </div>
+
+              {/* Step 6 */}
+              <div className="bg-blue-50 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-350">
+                <h3 className="text-2xl font-bold text-blue-500 mb-4">Step 6 – Willingness</h3>
+                <p className="text-gray-900 font-semibold mb-4 text-lg leading-relaxed">
+                  We were entirely ready to have God remove all these defects of character.
+                </p>
+                <p className="text-gray-700 italic text-base leading-relaxed">
+                  James 4:10 – "Humble yourselves before the Lord, and he will lift you up."
+                </p>
+              </div>
+
+              {/* Step 7 */}
+              <div className="bg-blue-50 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-400">
+                <h3 className="text-2xl font-bold text-blue-500 mb-4">Step 7 – Humility</h3>
+                <p className="text-gray-900 font-semibold mb-4 text-lg leading-relaxed">
+                  We humbly asked Him to remove all our shortcomings.
+                </p>
+                <p className="text-gray-700 italic text-base leading-relaxed">
+                  1 John 1:9 – "If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness."
+                </p>
+              </div>
+
+              {/* Step 8 */}
+              <div className="bg-blue-50 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-450">
+                <h3 className="text-2xl font-bold text-blue-500 mb-4">Step 8 – Forgiveness</h3>
+                <p className="text-gray-900 font-semibold mb-4 text-lg leading-relaxed">
+                  We made a list of all persons we had harmed and became willing to make amends to them all.
+                </p>
+                <p className="text-gray-700 italic text-base leading-relaxed">
+                  Luke 6:31 – "Do to others as you would have them do to you."
+                </p>
+              </div>
+
+              {/* Step 9 */}
+              <div className="bg-blue-50 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-500">
+                <h3 className="text-2xl font-bold text-blue-500 mb-4">Step 9 – Amends</h3>
+                <p className="text-gray-900 font-semibold mb-4 text-lg leading-relaxed">
+                  We made direct amends to such people whenever possible, except when to do so would injure them or others.
+                </p>
+                <p className="text-gray-700 italic text-base leading-relaxed">
+                  Matthew 5:23–24 – "First go and be reconciled to them; then come and offer your gift."
+                </p>
+              </div>
+
+              {/* Step 10 */}
+              <div className="bg-blue-50 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-550">
+                <h3 className="text-2xl font-bold text-blue-500 mb-4">Step 10 – Perseverance</h3>
+                <p className="text-gray-900 font-semibold mb-4 text-lg leading-relaxed">
+                  We continued to take personal inventory and when we were wrong, promptly admitted it.
+                </p>
+                <p className="text-gray-700 italic text-base leading-relaxed">
+                  1 Corinthians 10:12 – "So, if you think you are standing firm, be careful that you don't fall!"
+                </p>
+              </div>
+
+              {/* Step 11 */}
+              <div className="bg-blue-50 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-600">
+                <h3 className="text-2xl font-bold text-blue-500 mb-4">Step 11 – Spiritual Growth</h3>
+                <p className="text-gray-900 font-semibold mb-4 text-lg leading-relaxed">
+                  We sought through prayer and meditation to improve our conscious contact with God, praying only for knowledge of His will and the power to carry it out.
+                </p>
+                <p className="text-gray-700 italic text-base leading-relaxed">
+                  Colossians 3:16 – "Let the word of Christ dwell in you richly..."
+                </p>
+              </div>
+
+              {/* Step 12 */}
+              <div className="bg-blue-50 p-8 rounded-lg shadow-lg hover-lift animate-fadeInScale delay-650">
+                <h3 className="text-2xl font-bold text-blue-500 mb-4">Step 12 – Service</h3>
+                <p className="text-gray-900 font-semibold mb-4 text-lg leading-relaxed">
+                  Having had a spiritual awakening as the result of these steps, we tried to carry this message to others and practice these principles in all our affairs.
+                </p>
+                <p className="text-gray-700 italic text-base leading-relaxed">
+                  Galatians 6:1 – "Brothers and sisters, if someone is caught in a sin, you who live by the Spirit should restore that person gently."
+                </p>
+              </div>
+            </div>
+
+            {/* Purpose Section */}
+            <div className="bg-white p-10 rounded-lg shadow-lg hover-glow animate-slideInUp delay-200">
+              <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">The Purpose of Utilizing the Christian 12 Steps</h3>
+
+              <p className="text-lg text-gray-700 leading-relaxed mb-10 text-center max-w-4xl mx-auto">
+                The purpose of utilizing the Christian 12 Steps is to provide a spiritual framework for recovery, healing, and transformation
+                that is rooted in biblical truth and centered on Christ. While the original 12 steps were designed for addiction recovery,
+                the Christian adaptation emphasizes God's power, grace, and personal relationship with Jesus Christ as the foundation for lasting change.
+              </p>
+
+              <div className="space-y-6">
+                <div className="border-l-4 border-blue-500 pl-6 py-2">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-3">1. Surrendering to God's Will</h4>
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    The Christian 12 steps guide people to admit their brokenness, let go of self-reliance, and turn their lives over to God,
+                    recognizing that only He has the power to heal and restore.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-blue-500 pl-6 py-2">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-3">2. Healing and Restoration</h4>
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    Through confession, repentance, and forgiveness, the steps help individuals face their past, release guilt and shame,
+                    and experience God's redeeming love that brings true healing.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-blue-500 pl-6 py-2">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-3">3. Character Transformation</h4>
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    By working the steps, participants develop Christlike character traits such as humility, honesty, self-control, and perseverance.
+                    These steps align with biblical principles of sanctification—becoming more like Christ day by day.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-blue-500 pl-6 py-2">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-3">4. Freedom from Bondage</h4>
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    The Christian 12 steps are not just about stopping destructive behaviors; they are about finding spiritual freedom.
+                    They break the chains of sin, addiction, and unhealthy patterns by replacing them with godly habits and reliance on Scripture.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-blue-500 pl-6 py-2">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-3">5. Building Healthy Relationships</h4>
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    The steps encourage making amends, seeking forgiveness, and restoring broken relationships.
+                    This reflects Christ's command to love others and pursue reconciliation wherever possible.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-blue-500 pl-6 py-2">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-3">6. Daily Dependence on God</h4>
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    A central purpose is to teach ongoing reliance on prayer, Bible study, and the Holy Spirit for strength and guidance.
+                    It emphasizes that recovery is not a one-time event but a lifelong journey with God.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-blue-500 pl-6 py-2">
+                  <h4 className="text-xl font-semibold text-gray-900 mb-3">7. Living with Purpose</h4>
+                  <p className="text-gray-700 leading-relaxed text-base">
+                    Finally, the Christian 12 steps help individuals move from recovery into service—sharing their testimonies,
+                    encouraging others, and living as witnesses of Christ's power to transform lives.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-10 p-8 bg-blue-50 rounded-lg border-2 border-blue-500">
+                <p className="text-xl text-center text-gray-900 font-semibold leading-relaxed">
+                  ✨ In short: The purpose of utilizing the Christian 12 steps is to lead people from brokenness to wholeness,
+                  from bondage to freedom, and from self-reliance to Christ-dependence—while teaching them to live out their faith
+                  in daily life and relationships.
+                </p>
+              </div>
+
+              {/* Sponsorship and Accountability Section */}
+              <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Sponsorship */}
+                <div className="bg-blue-50 p-8 rounded-lg shadow-lg">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-6">Purpose of Sponsorship</h4>
+                  <ul className="space-y-4 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-blue-500 font-bold mr-3">•</span>
+                      <span className="text-base leading-relaxed">Guides others through the 12 steps with experience and Scripture.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 font-bold mr-3">•</span>
+                      <span className="text-base leading-relaxed">Provides spiritual mentorship and encouragement.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 font-bold mr-3">•</span>
+                      <span className="text-base leading-relaxed">Offers accountability and a safe place for honesty.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Accountability */}
+                <div className="bg-blue-50 p-8 rounded-lg shadow-lg">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-6">Purpose of Accountability</h4>
+                  <ul className="space-y-4 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-blue-500 font-bold mr-3">•</span>
+                      <span className="text-base leading-relaxed">Keeps us walking in the light and not in secrecy.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 font-bold mr-3">•</span>
+                      <span className="text-base leading-relaxed">Acts as guardrails against relapse.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 font-bold mr-3">•</span>
+                      <span className="text-base leading-relaxed">Builds integrity, consistency, and community support.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Closing Statement */}
+              <div className="mt-8 p-6 bg-white rounded-lg border-l-4 border-blue-500">
+                <p className="text-lg text-center text-gray-900 font-semibold italic">
+                  Sponsorship guides — accountability guards. Together they keep us growing in Christ.
+                </p>
+              </div>
             </div>
           </div>
         </section>
