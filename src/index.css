@@ -518,3 +518,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Custom utility classes to remove inline styles */
+/* Note: .bg-image removed - background set via inline style to avoid webpack resolution issues */
+
+.logo-desktop {
+  max-width: 120px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+}
+
+.logo-mobile {
+  max-width: 80px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+}
+
+.pt-hero {
+  padding-top: 8rem;
+}
+
+.iframe-no-border {
+  border: 0;
+}
+
+.facebook-blue {
+  background-color: #1877f2;
+  color: white;
+}
+
+.paypal-yellow {
+  background-color: #ffc439;
+  color: #003087;
+}
+
+.focus\:outline-none:focus {
+  outline: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}

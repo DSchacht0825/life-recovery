@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import EmailLink from './components/EmailLink';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -56,9 +57,7 @@ function App() {
       {/* Background Image with Opacity - full screen */}
       <div
         className="fixed inset-0 bg-cover bg-center bg-no-repeat opacity-25 z-0"
-        style={{
-          backgroundImage: 'url(/background.jpeg)'
-        }}
+        style={{ backgroundImage: 'url(/background.jpeg)' }}
       ></div>
       
       {/* Content */}
@@ -76,7 +75,7 @@ function App() {
 
             {/* Centered logo */}
             <div className="flex justify-center animate-zoomIn delay-200">
-              <img src="/logo2.jpg" alt="Life Recovery Logo" style={{ maxWidth: '120px', maxHeight: '120px', width: 'auto', height: 'auto' }} className="hover-scale animate-pulse" />
+              <img src="/logo2.jpg" alt="Life Recovery Logo" className="logo-desktop hover-scale animate-pulse" />
             </div>
 
             {/* Right side links */}
@@ -92,7 +91,7 @@ function App() {
           <div className="md:hidden flex flex-col items-center gap-4">
             {/* Logo at top */}
             <div className="animate-zoomIn">
-              <img src="/logo2.jpg" alt="Life Recovery Logo" style={{ maxWidth: '80px', maxHeight: '80px', width: 'auto', height: 'auto' }} className="hover-scale" />
+              <img src="/logo2.jpg" alt="Life Recovery Logo" className="logo-mobile hover-scale" />
             </div>
 
             {/* Mobile menu links */}
@@ -109,14 +108,14 @@ function App() {
         </div>
 
         {/* Hero Section */}
-        <section id="home" className="py-20 px-4 text-center" style={{ paddingTop: '8rem' }}>
+        <section id="home" className="py-20 px-4 text-center pt-hero">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold text-gray-900 mb-6 animate-fadeInUp delay-300">
-              Life Recovery San Diego | Faith-Based 12-Step Recovery Program
+              Life Recovery San Diego | Faith-Based 12-Step Recovery
             </h1>
             <p className="text-xl text-gray-700 mb-8 animate-fadeInUp delay-400">
-              Join our Christ-centered 12-step recovery program in Spring Valley, San Diego. Every Friday 6pm at Casa de Oro Bible Church. 
-              Supporting adults and youth through addiction recovery, life struggles, and spiritual healing with proven 12-step principles and biblical teachings.
+              Join our <strong>Christ-centered 12-step recovery program</strong> in <strong>Spring Valley, San Diego</strong>. Every Friday 6pm at <strong>Casa de Oro Bible Church</strong>.
+              Supporting adults and youth through <strong>addiction recovery</strong>, life struggles, and <strong>spiritual healing</strong> with proven 12-step principles and biblical teachings.
             </p>
             <div className="bg-blue-500 text-white px-8 py-4 rounded-lg inline-block animate-flipIn delay-500 hover-glow hover-scale">
               <h3 className="text-2xl font-semibold mb-2">Friday Nights at 6pm</h3>
@@ -568,7 +567,7 @@ function App() {
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.7!2d-117.0!3d32.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d95b!2s10195+Madrid+Way%2C+Spring+Valley%2C+CA+91977!5e0!3m2!1sen!2sus!4v1"
                     width="100%"
                     height="300"
-                    style={{ border: 0 }}
+                    className="iframe-no-border"
                     allowFullScreen={false}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
@@ -599,20 +598,17 @@ function App() {
                   </a>
                 </p>
                 <p>
-                  <a href="mailto:liferecoverysv@gmail.com" className="text-white hover:text-gray-300 underline">
-                    liferecoverysv@gmail.com
-                  </a>
+                  <EmailLink className="text-white hover:text-gray-300 underline" />
                 </p>
               </div>
 
               {/* Social & Giving Buttons */}
               <div className="flex flex-col items-center gap-4 animate-slideInRight delay-300">
-                <a 
-                  href="https://www.facebook.com/profile.php?id=61556688216356" 
-                  target="_blank" 
+                <a
+                  href="https://www.facebook.com/profile.php?id=61556688216356"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 rounded-lg hover-glow hover-scale transition-all duration-300 w-full md:w-auto justify-center"
-                  style={{ backgroundColor: '#1877f2', color: 'white' }}
+                  className="inline-flex items-center px-6 py-3 rounded-lg hover-glow hover-scale transition-all duration-300 w-full md:w-auto justify-center facebook-blue"
                 >
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -620,12 +616,11 @@ function App() {
                   <span className="hidden sm:inline">Follow us on Facebook</span>
                   <span className="sm:hidden">Facebook</span>
                 </a>
-                <a 
-                  href="https://www.paypal.com/ncp/payment/79LF9UUUUV234" 
-                  target="_blank" 
+                <a
+                  href="https://www.paypal.com/ncp/payment/79LF9UUUUV234"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 rounded-lg hover-glow hover-scale transition-all duration-300 w-full md:w-auto justify-center"
-                  style={{ backgroundColor: '#ffc439', color: '#003087' }}
+                  className="inline-flex items-center px-6 py-3 rounded-lg hover-glow hover-scale transition-all duration-300 w-full md:w-auto justify-center paypal-yellow"
                 >
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.17c-.2-.04-.413-.06-.64-.06H13.78c-.524 0-.968.383-1.05.901l-.86 5.45c-.082.518.257.99.76.99h1.91c3.24 0 5.77-1.317 6.504-5.12.734-3.803-.257-1.991-.822-1.991z"/>

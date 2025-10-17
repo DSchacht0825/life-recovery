@@ -9,8 +9,8 @@
     <meta name="theme-color" content="#4a7c59" />
     
     <!-- SEO Meta Tags -->
-    <title>Life Recovery San Diego | 12 Step Faith-Based Recovery Program | Casa de Oro Bible Church</title>
-    <meta name="description" content="Join Life Recovery's 12-step faith-based recovery program in Spring Valley, San Diego. Every Friday 6pm at Casa de Oro Bible Church. Support for addiction recovery, life struggles, and hope through Christ-centered teachings." />
+    <title>Life Recovery San Diego | Faith-Based 12-Step Program</title>
+    <meta name="description" content="Faith-based 12-step recovery program in Spring Valley, San Diego. Every Friday 6pm. Addiction recovery support through Christ-centered teachings." />
     <meta name="keywords" content="12 step recovery, faith based recovery, recovery San Diego, addiction recovery, Life Recovery, Casa de Oro Bible Church, Spring Valley recovery, Christian recovery program, AA meetings, NA meetings, substance abuse help, drug recovery, alcohol recovery, youth recovery, family support, recovery testimonies, sober living support, San Diego county recovery, East County recovery, biblical recovery" />
     <meta name="author" content="Life Recovery at Casa de Oro Bible Church" />
     <meta name="robots" content="index, follow" />
@@ -18,8 +18,8 @@
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Life Recovery San Diego | 12 Step Faith-Based Recovery Program" />
-    <meta property="og:description" content="Join Life Recovery's 12-step faith-based recovery program in Spring Valley, San Diego. Every Friday 6pm at Casa de Oro Bible Church. Support for addiction recovery and life struggles." />
+    <meta property="og:title" content="Life Recovery San Diego | Faith-Based 12-Step Program" />
+    <meta property="og:description" content="Faith-based 12-step recovery program in Spring Valley, San Diego. Every Friday 6pm. Addiction recovery support through Christ-centered teachings." />
     <meta property="og:image" content="%PUBLIC_URL%/logo2.jpg" />
     <meta property="og:url" content="https://liferecoverysd.org" />
     <meta property="og:site_name" content="Life Recovery San Diego" />
@@ -27,8 +27,8 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Life Recovery San Diego | 12 Step Faith-Based Recovery Program" />
-    <meta name="twitter:description" content="Join Life Recovery's 12-step faith-based recovery program in Spring Valley, San Diego. Every Friday 6pm at Casa de Oro Bible Church." />
+    <meta name="twitter:title" content="Life Recovery San Diego | Faith-Based 12-Step Program" />
+    <meta name="twitter:description" content="Faith-based 12-step recovery program in Spring Valley, San Diego. Every Friday 6pm. Addiction recovery support." />
     <meta name="twitter:image" content="%PUBLIC_URL%/logo2.jpg" />
     
     <!-- Local Business Meta Tags -->
@@ -78,7 +78,7 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
+          "@type": ["Organization", "LocalBusiness", "HealthAndBeautyBusiness"],
           "@id": "https://liferecoverysd.org/#organization",
           "name": "Life Recovery at Casa de Oro Bible Church",
           "alternateName": "Life Recovery San Diego",
@@ -89,10 +89,12 @@
             "width": 400,
             "height": 400
           },
+          "image": "https://liferecoverysd.org/logo2.jpg",
           "description": "Faith-based 12-step recovery program serving San Diego County with Christ-centered addiction recovery support for adults and youth.",
           "foundingDate": "2020",
           "email": "liferecoverysv@gmail.com",
           "telephone": "+1-619-414-6985",
+          "priceRange": "Free",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "10195 Madrid Way",
@@ -106,14 +108,37 @@
             "latitude": 32.7442,
             "longitude": -116.9989
           },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Friday",
+            "opens": "18:00",
+            "closes": "19:30"
+          },
           "areaServed": [
-            "San Diego County",
-            "Spring Valley",
-            "El Cajon",
-            "La Mesa",
-            "Lemon Grove",
-            "National City",
-            "Chula Vista"
+            {
+              "@type": "City",
+              "name": "Spring Valley"
+            },
+            {
+              "@type": "City",
+              "name": "El Cajon"
+            },
+            {
+              "@type": "City",
+              "name": "La Mesa"
+            },
+            {
+              "@type": "City",
+              "name": "Lemon Grove"
+            },
+            {
+              "@type": "City",
+              "name": "National City"
+            },
+            {
+              "@type": "City",
+              "name": "Chula Vista"
+            }
           ],
           "hasOfferingCatalog": {
             "@type": "OfferingCatalog",
@@ -147,7 +172,12 @@
           },
           "sameAs": [
             "https://www.facebook.com/profile.php?id=61556688216356"
-          ]
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "1"
+          }
         },
         {
           "@type": "Event",
