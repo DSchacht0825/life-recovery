@@ -631,6 +631,9 @@ function App() {
               </div>
 
             </div>
+            <div className="text-center mt-8 pt-6 border-t border-white/20">
+              <p className="text-sm opacity-80">Website by <a href="https://causory.com" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-100">Causory</a></p>
+            </div>
           </div>
         </footer>
       </div>
